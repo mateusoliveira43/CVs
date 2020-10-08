@@ -1,0 +1,158 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{geometry}	
+\geometry{
+    textwidth=190mm,	
+    textheight=267mm,	
+	inner=10mm,		
+	outer=10mm,		
+	top=10mm,
+	bottom=20mm
+}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	urlcolor = cyan,
+	linkcolor = black,
+}
+
+%%%%%%%%%%%%%%%%%%%%% - Usage Changes - %%%%%%%%%%%%%%%%%%%%%
+\newcommand{\professional}{Mateus Souza Oliveira}
+\newcommand{\age}{24}
+\newcommand{\address}{Rodovia Amaro Antônio Vieira, 2593 -- Itacorubi. Florianópolis, Santa Catarina, Brazil}
+\newcommand{\phone}{+55 (48) 9 9810-2694}
+\newcommand{\email}{matews1943@gmail.com}
+\renewcommand{\date}{September 24, 2020}
+\newcommand{\about}{
+    Proactive, detailed, determined and always seeking to improve myself. Seeking my first opportunity as a junior developer! Currently, I am studying programming and studying Pure and Applied Mathematics as a master student at Federal University of Santa Catarina (UFSC). I wish to have contact with the different areas of the profession, with the goal of finding out which fits better my profile. I have already done web projects with Python, HTML, CSS and JavaScript (available at my GitHub repository).
+	\vspace{0\baselineskip}
+}
+%%%%%%%%%%%%%%%%% - End of Usage Changes - %%%%%%%%%%%%%%%%%%
+
+\setlength{\fboxrule}{2pt}
+\setlength{\fboxsep}{0pt}
+
+\fancyhead{} % Header: reset
+\fancyfoot{} % Footer: reset
+\fancyfoot[C]{Page \thepage \ of \pageref{lastPage}} % Footer: center
+\fancyfoot[R]{Made with \LaTeX} % Footer: right
+\fancyfoot[L]{Updated in \date} % Footer: left
+\renewcommand{\headrulewidth}{0pt} % Header line thickness
+\renewcommand{\footrulewidth}{0.4pt} % Footer line thickness
+\pagestyle{fancy} % Sets the page style
+
+\newcommand{\createSection}[4][0]{
+    \noindent
+	\begin{minipage}{0.16\linewidth}
+		\large{\textbf{#2}}
+		\vspace{#3\baselineskip}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.79\linewidth}
+		#4
+		\ifnum0#1>0 { \hrule {\ } } \fi
+	\end{minipage}
+	\vspace{\baselineskip}
+}
+
+\begin{document}
+
+	\noindent
+	\fbox{
+	\hspace*{-3.35\fboxrule}
+	\begin{minipage}{0.3\linewidth}
+		\includegraphics[width=\linewidth]{Imagens/perfil.jpeg}
+	\end{minipage}
+	\hspace*{-3.35\fboxrule}
+	}
+	\hfill
+	\begin{minipage}{0.65\linewidth}
+		\Huge{\bf \professional, \age}\\\vspace{-1.75\baselineskip}
+		
+		\noindent\rule{\textwidth}{1.5pt} {\ }\\\vspace{-1.8\baselineskip}
+		
+		\large{
+		\faMapMarker \ \address \\
+		\begin{minipage}{0.5\linewidth}
+			\faWhatsapp \ \phone
+		\end{minipage}
+		\begin{minipage}{0.5\linewidth}
+			\faEnvelope \ \email
+		\end{minipage}
+		\faLink \ \url{https://mateusoliveira43.github.io/}\\
+		\faLinkedinSquare \ \url{https://www.linkedin.com/in/mateusoliveira43/}\\
+		\faGithub \ \url{https://github.com/mateusoliveira43} \\
+		\vfill
+		\textbf{About}: \about
+		}
+	\end{minipage}
+	\vspace{\baselineskip}
+	
+%%%%%%%%%%%%%%%%%%%%%%%% - CV's Body - %%%%%%%%%%%%%%%%%%%%%%%%
+	\createSection[1]{Goals}{3}{
+	    I want to work in a place where I can always improve myself. I wish to have contact with the different areas of the profession before specializing in one area/language. I am interested in working with programming languages, frameworks and tools which I do not have prior experience. I seek to work in the state of Santa Catarina (Brazil) or  remotely. \\
+	}
+	
+	\createSection[1]{Education}{4}{
+	    \textit{Post-Graduation in Pure and Applied Mathematics (Master Degree)}, Federal University of Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill 2020 - currently \\
+		
+		\textit{Mathematics - Bachelor Degree}, Federal University of Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill 2014 - 2020 \\
+	}
+	
+	\createSection[1]{Experience}{14}{
+	    \textit{Scientific Initiation Scholarship}, Federal University of Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill August 2019 - February 2020 \\
+		\textbf{Activities}: Research focused in Computer Graphics.\\
+		
+		
+		\textit{Laboratory of Mathematical and Technological Studies (LEMAT) Scholarship}, Federal University of Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill March 2019 - July 2019 \\
+		\textbf{Activities}: Application, development and update of project files.\\
+		
+		\textit{Regional Mathematical Olympiad of Santa Catarina (ORM) Journal Scholarship}, Federal University of Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill March 2016 - March 2017 \\
+		\textbf{Activities}: Application and development of training files; correction and development of test files; update of journal master file.\\
+		
+		\textit{Tutorial Education Program in Mathematics (PET Matemática) Scholarship}, Federal University of Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill March 2015 - February 2016 \\
+		\textbf{Activities}: Application and development of training files; teaching in pre-university preparatory course; teaching and elaboration of \LaTeX\ and Matlab mini courses.\\
+	}
+    
+    \createSection[1]{Programming languages and tools}{1}{
+        \large{\bf
+			\begin{minipage}{0.33\linewidth}
+				Python (Django)\\
+				JavaScript (Node.js)\\
+				Git\\
+			\end{minipage}
+			\begin{minipage}{0.33\linewidth}
+				HTML\\
+				CSS (Bootstrap)\\
+				Linux\\
+			\end{minipage}
+			\begin{minipage}{0.33\linewidth}
+				MySQL\\
+				MongoDB\\
+				\\
+			\end{minipage}
+		}
+    }
+	
+	\createSection{Languages}{2}{
+	    \large{
+			\begin{minipage}{0.5\linewidth}
+				\textbf{Portuguese}: native \\
+				\textbf{English}: fluent \\
+			\end{minipage}
+			\begin{minipage}{0.5\linewidth}
+				\textbf{Spanish}: basic \\
+				\textbf{German}: basic \\
+			\end{minipage}
+		}
+	}
+%%%%%%%%%%%%%%%%%%%% - End of CV's Body - %%%%%%%%%%%%%%%%%%%%
+\label{lastPage}
+\end{document}
