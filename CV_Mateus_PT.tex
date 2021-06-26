@@ -6,10 +6,10 @@
 
 \usepackage{geometry}
 \geometry{
-    textwidth=190mm,	
-    textheight=267mm,	
-	inner=10mm,		
-	outer=10mm,		
+    textwidth=190mm,
+    textheight=267mm,
+	inner=10mm,
+	outer=10mm,
 	top=10mm,
 	bottom=20mm
 }
@@ -25,13 +25,15 @@
 
 %%%%%%%%%%%%%%%%%% - Alterações de Uso - %%%%%%%%%%%%%%%%%%
 \newcommand{\profissional}{Mateus Souza Oliveira}
-\newcommand{\idade}{24}
+\newcommand{\idade}{25}
 \newcommand{\Endereco}{Rodovia Amaro Antônio Vieira, 2593 -- Itacorubi. Florianópolis, Santa Catarina, Brasil}
 \newcommand{\telefone}{+55 (48) 9 9810-2694}
-\newcommand{\email}{matews1943@gmail.com} 
+\newcommand{\email}{matews1943@gmail.com}
 \newcommand{\data}{\today}
 \newcommand{\sobre}{
-    Pró-ativo, detalhista, determinado e sempre em busca de me aprimorar. Atualmente, estou trabalhando como desenvolvedor de software júnior na Fundação CERTI. Confira alguns dos meus projetos no meu repositório do GitHub e no meu site pessoal!
+    Pró-ativo, detalhista, determinado e sempre em busca de me aprimorar. Atualmente, estou trabalhando como desenvolvedor de software júnior na Fundação CERTI. \\
+
+    Tenho interesse em aprender Dart (Flutter) e C. Prefiro trabalhar com Linux. Confira alguns dos meus projetos no meu repositório do GitHub e no meu site pessoal!
     \vspace{2\baselineskip}
 }
 %%%%%%%%%%%%%%% - Fim de Alterações de Uso - %%%%%%%%%%%%%%
@@ -63,21 +65,21 @@
 }
 
 \begin{document}
-	
+
 	\noindent
 	\fbox{
 	\hspace*{-3.35\fboxrule}
 	\begin{minipage}{0.3\linewidth}
-		\includegraphics[width=\linewidth]{Imagens/perfil.jpeg}
+		\includegraphics[width=\linewidth]{img/profile.jpeg}
 	\end{minipage}
 	\hspace*{-3.35\fboxrule}
 	}
 	\hfill
 	\begin{minipage}{0.65\linewidth}
 		\Huge{\bf \profissional, \idade}\\\vspace{-1.75\baselineskip}
-		
+
 		\noindent\rule{\textwidth}{1.5pt} {\ }\\\vspace{-1.8\baselineskip}
-		
+
 		\large{
 		\faMapMarker \ \Endereco \\
 		\begin{minipage}{0.5\linewidth}
@@ -86,57 +88,59 @@
 		\begin{minipage}{0.5\linewidth}
 			\faEnvelope \ \email
 		\end{minipage}
+		\begin{minipage}{0.5\linewidth}
+			\faLinkedinSquare \ \href{https://www.linkedin.com/in/mateusoliveira43/}{\texttt{/mateusoliveira43}}
+		\end{minipage}
+		\begin{minipage}{0.5\linewidth}
+			\faGithub \ \href{https://github.com/mateusoliveira43}{\texttt{/mateusoliveira43}}
+		\end{minipage}
 		\faLink \ \href{https://mateusoliveira43.github.io/}{\texttt{mateusoliveira43.github.io}}\\
-		\faLinkedinSquare \ \href{https://www.linkedin.com/in/mateusoliveira43/}{\texttt{/mateusoliveira43}}\\
-		\faGithub \ \href{https://github.com/mateusoliveira43}{\texttt{/mateusoliveira43}} \\
 		\vfill
-		\textbf{Sobre}: \sobre
+		\textbf{Sobre}:\sobre
 		}
 	\end{minipage}
 	\vspace{\baselineskip}
-	
+
 %%%%%%%%%%%%%%%%%%%%% - Corpo do CV - %%%%%%%%%%%%%%%%%%%%%
     \criaSecao[1]{Educação}{2}{
 		\textit{Matemática - Bacharelado}, Universidade Federal de Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill 2014 - 2020 \\
     }
-    
-    \criaSecao[1]{Experiência}{17}{
+
+    \criaSecao[1]{Experiência}{21}{
         \textit{Desenvolvedor de Software Júnior}, Fundação CERTI, Florianópolis, Santa Catarina \hfill Outubro 2020 - atualmente \\
-        
+        \textbf{Atividades}: Atuação em projeto WEB envolvendo Python (FastAPI, SQLAlchemy) no Backend, JavaScript (Node.js, React, TypeScript) no Frontend,  PostgreSQL no banco de dados e conteinerizado com Docker. Todo o código tendo integração contínua através do Jenkins e métricas de qualidade de testes, linter e SonarQube. Planejamento e trabalho seguindo alguns princípios de metodologia ágeis.  \\
+
         \textit{Bolsista de Iniciação Científica}, Universidade Federal de Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill Agosto 2019 - Fevereiro 2020 \\
 		\textbf{Atividades}: Pesquisa voltada a computação gráfica.\\
-		
+
 		\textit{Bolsista do Laboratório de Estudos de Matemática e Tecnologias}, Universidade Federal de Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill Março 2019 - Julho 2019 \\
 		\textbf{Atividades}: Aplicação, desenvolvimento e atualização de arquivos do projeto.\\
-		
+
 		\textit{Bolsista da Revista da Olimpíada Regional de Matemática de Santa Catarina}, Universidade Federal de Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill Março 2016 - Março 2017 \\
 		\textbf{Atividades}: Aplicação e desenvolvimento de arquivos de treinamento; correção e desenvolvimento de arquivos de prova; atualização do arquivo mestre da revista.\\
-		
+
 		\textit{Bolsista do Programa de Educação Tutorial de Matemática}, Universidade Federal de Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill Março 2015 - Fevereiro 2016 \\
 		\textbf{Atividades}: Aplicação e desenvolvimento de arquivos de treinamento; lecionamento em cursinho pré-vestibular; lecionamento e elaboração de minicursos de \LaTeX\ e Matlab. \\
     }
-    
-    \criaSecao[1]{Linguagens de programação e ferramentas}{1}{
+
+    \criaSecao[1]{Linguagens de programação e ferramentas}{2}{
         \large{\bf
-			\begin{minipage}{0.33\linewidth}
-				Python (Django)\\
-				JavaScript (Node.js)\\
+			\begin{minipage}{0.6\linewidth}
+				Python (FastAPI e Django)\\
+				JavaScript (Node.js, React e TypeScript)\\
 				Git\\
-			\end{minipage}
-			\begin{minipage}{0.33\linewidth}
-				HTML\\
-				CSS (Bootstrap)\\
 				Linux\\
 			\end{minipage}
-			\begin{minipage}{0.33\linewidth}
-				MySQL\\
-				MongoDB\\
+			\begin{minipage}{0.4\linewidth}
+				HTML\\
+				CSS (Bootstrap)\\
+				Docker\\
 				PostgreSQL\\
 			\end{minipage}
 		}
     }
-	
-	\criaSecao{Idiomas}{1}{
+
+	\criaSecao{Idiomas}{2}{
 	    \large{
 			\begin{minipage}{0.5\linewidth}
 				\textbf{Português}: nativo \\
@@ -149,5 +153,5 @@
 		}
 	}
 %%%%%%%%%%%%%%%%%% - Fim do Corpo do CV - %%%%%%%%%%%%%%%%%
-\label{ultimaPagina}
+    \label{ultimaPagina}
 \end{document}
