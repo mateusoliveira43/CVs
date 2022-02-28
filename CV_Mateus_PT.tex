@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
+\usepackage[skins,breakable]{tcolorbox}
 
 \usepackage{geometry}
 \geometry{
@@ -25,16 +26,15 @@
 
 %%%%%%%%%%%%%%%%%% - Alterações de Uso - %%%%%%%%%%%%%%%%%%
 \newcommand{\profissional}{Mateus Souza Oliveira}
-\newcommand{\idade}{25}
+\newcommand{\idade}{26}
 \newcommand{\Endereco}{Rodovia Amaro Antônio Vieira, 2593 -- Itacorubi. Florianópolis, Santa Catarina, Brasil}
 \newcommand{\telefone}{+55 (48) 9 9810-2694}
 \newcommand{\email}{matews1943@gmail.com}
 \newcommand{\data}{\today}
 \newcommand{\sobre}{
-    Pró-ativo, detalhista, determinado e sempre em busca de me aprimorar. Atualmente, estou trabalhando como desenvolvedor de software júnior na Fundação CERTI. \\
+    Pró-ativo, detalhista, determinado e sempre em busca de me aprimorar. Atualmente, estou trabalhando como desenvolvedor web. Tenho experiência com Python, Git, Docker, SQL, Linux, JavaScript, Testes, ferramentas de qualidade de código, Integração Contínua, PostgreSQL e GitHub, GitLab e Bitbucket. Sou fluente em inglês.\\
 
-    Tenho interesse em aprender Dart (Flutter) e C. Prefiro trabalhar com Linux. Confira alguns dos meus projetos no meu repositório do GitHub e no meu site pessoal!
-    \vspace{2\baselineskip}
+    Tenho interesse em trabalhar com Python e automatizações. Prefiro trabalhar com Linux.
 }
 %%%%%%%%%%%%%%% - Fim de Alterações de Uso - %%%%%%%%%%%%%%
 
@@ -51,17 +51,16 @@
 \pagestyle{fancy} % Define o estilo da página
 
 \newcommand{\criaSecao}[4][0]{
-    \noindent
-	\begin{minipage}{0.16\linewidth}
-		\large{\textbf{#2}}
-		\vspace{#3\baselineskip}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.79\linewidth}
-		#4
+	\begin{tcolorbox}[
+        blanker,
+        breakable,
+        title=\begin{minipage}{0.16\linewidth}\large{\textbf{#2}}\vspace{-#3\baselineskip}\end{minipage},
+        coltitle=black,
+        leftupper=0.21\linewidth,
+    ]
+        #4
 		\ifnum0#1>0 { \hrule {\ } } \fi
-	\end{minipage}
-	\vspace{\baselineskip}
+    \end{tcolorbox}
 }
 
 \begin{document}
@@ -106,9 +105,20 @@
 		\textit{Matemática - Bacharelado}, Universidade Federal de Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill 2014 - 2020 \\
     }
 
-    \criaSecao[1]{Experiência}{21}{
+    \criaSecao[1]{Experiência}{2}{
         \textit{Desenvolvedor de Software Júnior}, Fundação CERTI, Florianópolis, Santa Catarina \hfill Outubro 2020 - atualmente \\
-        \textbf{Atividades}: Atuação em projeto WEB envolvendo Python (FastAPI, SQLAlchemy) no Backend, JavaScript (Node.js, React, TypeScript) no Frontend,  PostgreSQL no banco de dados e conteinerizado com Docker. Todo o código tendo integração contínua através do Jenkins e métricas de qualidade de testes, linter e SonarQube. Planejamento e trabalho seguindo alguns princípios de metodologia ágeis.  \\
+        Março 2022 - Atualmente\\
+        \textbf{Atividades}: Atualização do site interno da Fundação CERTI.\\
+
+        Outubro 2020 - Fevereiro 2022\\
+        \textbf{Atividades}: Projeto WEB e aplicativo desktop (além da tradução do código de cálculos em Visual Basic para Python), de empresa nacional, envolvendo Python (PyPy, FastAPI, SQLAlchemy, Numpy, Pandas) no Backend, JavaScript (TypeScript, Node.js, React) no Frontend, PostgreSQL no banco de dados. Todo o código tendo integração contínua através do Jenkins, métricas de qualidade com testes, linter e SonarQube e conteinerizado com Docker.\\
+
+        Atuei na criação da estrutura do frontend do site, definição da estrutura do banco de dados (junto com o cliente e time de engenharia mecânica/petróleo), revisões e implementações (tanto no backend quanto no frontend) e automatizações. Além disso, fui uma das lideranças do time (que contava com equipes de desenvolvimento, QA, UX e engenharia mecânica/petróleo). Planejamento e trabalho seguindo alguns princípios de metodologia ágeis.\\
+
+        Agosto 2021 - Janeiro 2022\\
+        \textbf{Atividades}: Projeto legado embarcado Linux com interface WEB (IHM), de empresa Alemã, envolvendo C++ no dispositivo, JavaScript (Meteor) no Backend e Frontend, SQLite no banco de dados. Código tendo integração contínua através do GitLab, métricas de qualidade com testes, linter e conteinerizado com Docker.\\
+
+        Atuei implementando melhorias na integração contínua dos repositórios e melhorias e automatizações com Python. Planejamento e trabalho em inglês.\\
 
         \textit{Bolsista de Iniciação Científica}, Universidade Federal de Santa Catarina (UFSC), Florianópolis, Santa Catarina \hfill Agosto 2019 - Fevereiro 2020 \\
 		\textbf{Atividades}: Pesquisa voltada a computação gráfica.\\
@@ -123,19 +133,25 @@
 		\textbf{Atividades}: Aplicação e desenvolvimento de arquivos de treinamento; lecionamento em cursinho pré-vestibular; lecionamento e elaboração de minicursos de \LaTeX\ e Matlab. \\
     }
 
-    \criaSecao[1]{Linguagens de programação e ferramentas}{2}{
+    \criaSecao[1]{Linguagens de programação e ferramentas}{4}{
         \large{\bf
-			\begin{minipage}{0.6\linewidth}
-				Python (FastAPI e Django)\\
-				JavaScript (Node.js, React e TypeScript)\\
-				Git\\
+			\begin{minipage}{0.65\linewidth}
+				Python (FastAPI, pytest, unittest, argparse)\\
+				JavaScript (TypeScript, Node.js, React, Jest)\\
+				Docker (Docker Compose)\\
 				Linux\\
+				GitHub\\
+				Bitbucket\\
+				PostgreSQL\\
 			\end{minipage}
-			\begin{minipage}{0.4\linewidth}
+			\begin{minipage}{0.35\linewidth}
+				Git\\
+				SQL\\
 				HTML\\
 				CSS (Bootstrap)\\
-				Docker\\
-				PostgreSQL\\
+				GitLab\\
+				Jenkins\\
+				\vspace{\baselineskip}
 			\end{minipage}
 		}
     }
@@ -145,10 +161,12 @@
 			\begin{minipage}{0.5\linewidth}
 				\textbf{Português}: nativo \\
 				\textbf{Inglês}: fluente \\
+				\textbf{Francês}: básico \\
 			\end{minipage}
 			\begin{minipage}{0.5\linewidth}
 				\textbf{Espanhol}: básico \\
 				\textbf{Alemão}: básico \\
+				\vspace{\baselineskip}
 			\end{minipage}
 		}
 	}
